@@ -4,12 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>GAMA567</title>
+    <title>GAMA567 - Official App</title>
     
-    <!-- Fonts & Icons -->
+    <!-- Premium Google Fonts & FontAwesome -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     
     <!-- Meta Pixel Tracking -->
@@ -40,22 +40,19 @@
 
     <style>
         :root {
-            /* Premium White & Gold Theme Palette */
-            --bg-void: #f4f1eb;
-            --bg-card: #ffffff;
-            --surface: #ffffff;
-            --surface-subtle: #fcfbf7;
-            --edge-gold: rgba(212, 175, 106, 0.4);
-            --gold-primary: #d4af6a;
-            --gold-bright: #f4d999;
-            --gold-dark: #a8823b;
-            --ink-primary: #121316;
-            --ink-secondary: #5a5f6e;
-            --ink-muted: #8c92a4;
-            --shadow-lux: 
-                0 20px 50px -10px rgba(184, 142, 60, 0.18),
-                0 10px 25px -5px rgba(0, 0, 0, 0.06);
-            --star-gold: #ffb800;
+            /* Ultra-Premium Midnight & Gold Glass Theme */
+            --bg-dark: #080a0f;
+            --card-glass: rgba(18, 22, 33, 0.85);
+            --card-border: rgba(234, 179, 8, 0.3);
+            --gold-light: #fde047;
+            --gold-primary: #eab308;
+            --gold-dark: #ca8a04;
+            --emerald-glow: #10b981;
+            --text-main: #ffffff;
+            --text-sub: #94a3b8;
+            --text-muted: #64748b;
+            --star-gold: #f59e0b;
+            --shadow-glow: 0 20px 50px -10px rgba(234, 179, 8, 0.25);
         }
 
         *, *::before, *::after {
@@ -67,9 +64,9 @@
         html { font-size: 16px; }
 
         body {
-            font-family: "Inter", sans-serif;
-            background: var(--bg-void);
-            color: var(--ink-primary);
+            font-family: "Plus Jakarta Sans", sans-serif;
+            background: var(--bg-dark);
+            color: var(--text-main);
             min-height: 100dvh;
             display: flex;
             flex-direction: column;
@@ -79,7 +76,7 @@
             padding: 12px 10px;
         }
 
-        /* Animated Ambient Background Glows */
+        /* Animated Dark Ambient Backdrop Grid */
         body::before {
             content: "";
             position: fixed;
@@ -87,14 +84,15 @@
             z-index: 0;
             pointer-events: none;
             background-image:
-                linear-gradient(rgba(212, 175, 106, 0.12) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(212, 175, 106, 0.12) 1px, transparent 1px);
-            background-size: 32px 32px;
+                linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+            background-size: 36px 36px;
             -webkit-mask-image: radial-gradient(ellipse 80% 70% at 50% 35%, #000 0%, transparent 85%);
             mask-image: radial-gradient(ellipse 80% 70% at 50% 35%, #000 0%, transparent 85%);
         }
 
-        .dl3d-orb-field {
+        /* Dynamic Glowing Background Spheres */
+        .glow-field {
             position: fixed;
             inset: 0;
             z-index: 0;
@@ -102,96 +100,96 @@
             overflow: hidden;
         }
 
-        .dl3d-orb {
+        .glow-orb {
             position: absolute;
             border-radius: 50%;
-            filter: blur(60px);
-            opacity: 0.5;
-            animation: dl3d-drift 12s ease-in-out infinite alternate;
+            filter: blur(80px);
+            opacity: 0.45;
+            animation: orbFloat 10s ease-in-out infinite alternate;
         }
 
-        .dl3d-orb-a {
+        .glow-orb-1 {
+            width: 300px;
+            height: 300px;
+            left: -80px;
+            top: -60px;
+            background: radial-gradient(circle, rgba(234, 179, 8, 0.4), transparent 70%);
+        }
+
+        .glow-orb-2 {
             width: 280px;
             height: 280px;
-            left: -60px;
-            top: -40px;
-            background: radial-gradient(circle, var(--gold-bright), transparent 70%);
+            right: -60px;
+            bottom: -40px;
+            background: radial-gradient(circle, rgba(16, 185, 129, 0.35), transparent 70%);
+            animation-delay: -5s;
         }
 
-        .dl3d-orb-b {
-            width: 260px;
-            height: 260px;
-            right: -50px;
-            bottom: -30px;
-            background: radial-gradient(circle, #ffe6ad, transparent 70%);
-            animation-delay: -6s;
-        }
-
-        @keyframes dl3d-drift {
+        @keyframes orbFloat {
             0% { transform: translate(0, 0) scale(1); }
-            100% { transform: translate(25px, -20px) scale(1.08); }
+            100% { transform: translate(30px, -25px) scale(1.1); }
         }
 
-        /* Main Stage & Card */
-        .dl3d-stage {
+        /* Main Container & Glassmorphic Card */
+        .stage-container {
             position: relative;
             z-index: 1;
-            perspective: 1200px;
+            perspective: 1000px;
             width: 100%;
-            max-width: 430px;
+            max-width: 420px;
             display: flex;
             justify-content: center;
         }
 
-        .dl3d-card {
+        .main-card {
             position: relative;
-            background: var(--bg-card);
-            border: 1px solid var(--edge-gold);
-            border-radius: 20px;
-            box-shadow: var(--shadow-lux);
+            background: var(--card-glass);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid var(--card-border);
+            border-radius: 24px;
+            box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.7), var(--shadow-glow);
             width: 100%;
             overflow: hidden;
             display: flex;
             flex-direction: column;
-            transform-style: preserve-3d;
-            will-change: transform;
             transition: transform 0.3s ease;
         }
 
-        .dl3d-card::before {
+        .main-card::before {
             content: "";
             position: absolute;
             top: 0;
             left: 0;
             right: 0;
-            height: 3px;
-            background: linear-gradient(90deg, transparent, var(--gold-primary), var(--gold-bright), transparent);
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--gold-light), var(--gold-primary), transparent);
             z-index: 2;
         }
 
-        /* Top Bar Notice */
-        .dl3d-notice {
+        /* Top Header Notice */
+        .top-notice {
             display: flex;
             align-items: center;
             justify-content: center;
             gap: 6px;
             padding: 8px 16px;
-            border-bottom: 1px solid var(--edge-gold);
-            background: rgba(212, 175, 106, 0.06);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+            background: rgba(234, 179, 8, 0.06);
             font-family: "JetBrains Mono", monospace;
             font-size: 10.5px;
-            color: var(--ink-secondary);
+            color: var(--text-sub);
             letter-spacing: 0.05em;
             text-transform: uppercase;
         }
 
-        .dl3d-notice strong {
-            color: var(--gold-dark);
+        .top-notice strong {
+            color: var(--gold-light);
             font-weight: 600;
         }
 
-        /* Card Content Body */
-        .dl3d-body {
+        /* Card Interior Body */
+        .card-body {
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -199,8 +197,8 @@
             gap: 12px;
         }
 
-        /* Identity Section */
-        .dl3d-identity {
+        /* Logo & Brand Identity */
+        .brand-identity {
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -209,43 +207,43 @@
             width: 100%;
         }
 
-        .dl3d-orbit {
+        .logo-wrapper {
             position: relative;
-            width: 96px;
-            height: 96px;
+            width: 92px;
+            height: 92px;
             display: flex;
             align-items: center;
             justify-content: center;
         }
 
-        .dl3d-ring-track {
+        .logo-spin-ring {
             position: absolute;
-            inset: 0;
+            inset: -4px;
             border-radius: 24px;
-            background: conic-gradient(from 0deg, var(--gold-primary), transparent 90deg, var(--gold-bright) 180deg, transparent 270deg, var(--gold-primary));
-            animation: dl3d-spin 5s linear infinite;
+            background: conic-gradient(from 0deg, var(--gold-light), transparent 120deg, var(--gold-primary) 240deg, transparent 360deg);
+            animation: spin 4s linear infinite;
             padding: 2px;
             -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
             -webkit-mask-composite: xor;
             mask-composite: exclude;
         }
 
-        @keyframes dl3d-spin {
+        @keyframes spin {
             to { transform: rotate(360deg); }
         }
 
-        .dl3d-logo-ring {
+        .logo-box {
             position: relative;
             width: 84px;
             height: 84px;
             border-radius: 20px;
             padding: 2px;
-            background: linear-gradient(135deg, var(--gold-bright), var(--gold-primary), var(--gold-dark));
-            box-shadow: 0 6px 16px rgba(184, 142, 60, 0.25);
+            background: linear-gradient(135deg, var(--gold-light), var(--gold-dark));
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
             overflow: hidden;
         }
 
-        .dl3d-logo-ring img {
+        .logo-box img {
             width: 100%;
             height: 100%;
             object-fit: cover;
@@ -254,39 +252,40 @@
             background: #fff;
         }
 
-        .dl3d-name {
+        .brand-title {
             font-family: "Bricolage Grotesque", sans-serif;
             font-size: 32px;
             font-weight: 800;
-            color: var(--ink-primary);
-            letter-spacing: -0.02em;
+            background: linear-gradient(180deg, #ffffff 30%, var(--gold-light) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: -0.01em;
             line-height: 1;
             margin-top: 2px;
         }
 
-        .dl3d-trader-name {
-            font-family: "Inter", sans-serif;
-            font-size: 12px;
-            color: var(--ink-secondary);
+        .badge-bar {
+            font-size: 11.5px;
+            color: var(--text-sub);
             font-weight: 600;
             display: flex;
             align-items: center;
             gap: 6px;
             flex-wrap: wrap;
             justify-content: center;
-            background: rgba(212, 175, 106, 0.08);
-            padding: 5px 12px;
-            border-radius: 20px;
-            border: 1px solid rgba(212, 175, 106, 0.25);
+            background: rgba(255, 255, 255, 0.04);
+            padding: 6px 14px;
+            border-radius: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
         }
 
-        .dl3d-trader-name i {
-            color: var(--gold-dark);
+        .badge-bar i {
+            color: var(--gold-light);
             font-size: 11px;
         }
 
         /* Divider */
-        .dl3d-divider {
+        .divider {
             width: 100%;
             display: flex;
             align-items: center;
@@ -294,262 +293,235 @@
             margin: 2px 0;
         }
 
-        .dl3d-divider::before, .dl3d-divider::after {
+        .divider::before, .divider::after {
             content: "";
             flex: 1;
             height: 1px;
-            background: var(--edge-gold);
+            background: rgba(255, 255, 255, 0.1);
         }
 
-        .dl3d-divider-label {
+        .divider-text {
             font-family: "JetBrains Mono", monospace;
             font-size: 10px;
-            letter-spacing: 0.14em;
+            letter-spacing: 0.15em;
             text-transform: uppercase;
-            color: var(--gold-dark);
+            color: var(--gold-primary);
             font-weight: 600;
         }
 
-        /* Features Section (Reduced to 2 boxes) */
-        .dl3d-features {
+        /* Feature Cards (2 Boxes) */
+        .features-list {
             display: flex;
             flex-direction: column;
             gap: 8px;
             width: 100%;
         }
 
-        .dl3d-feature {
+        .feature-box {
             display: flex;
             align-items: center;
             gap: 12px;
-            padding: 11px 14px;
-            background: var(--surface-subtle);
-            border: 1px solid var(--edge-gold);
-            border-radius: 12px;
-            transition: all 0.2s ease;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+            padding: 12px 14px;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.07);
+            border-radius: 14px;
+            transition: all 0.25s ease;
         }
 
-        .dl3d-feature:hover {
-            border-color: var(--gold-primary);
+        .feature-box:hover {
+            border-color: rgba(234, 179, 8, 0.4);
             transform: translateY(-2px);
-            background: #ffffff;
-            box-shadow: 0 6px 16px rgba(212, 175, 106, 0.15);
+            background: rgba(255, 255, 255, 0.05);
         }
 
-        .dl3d-feature-icon {
-            width: 32px;
-            height: 32px;
-            border-radius: 8px;
-            background: linear-gradient(135deg, var(--gold-bright), var(--gold-primary));
+        .feature-icon {
+            width: 34px;
+            height: 34px;
+            border-radius: 10px;
+            background: linear-gradient(135deg, rgba(234, 179, 8, 0.2), rgba(234, 179, 8, 0.05));
+            border: 1px solid rgba(234, 179, 8, 0.3);
             display: flex;
             align-items: center;
             justify-content: center;
             flex-shrink: 0;
             font-size: 14px;
-            color: #ffffff;
-            box-shadow: 0 3px 8px rgba(184, 142, 60, 0.3);
+            color: var(--gold-light);
         }
 
-        .dl3d-feature-content span {
+        .feature-box span {
             font-size: 13.5px;
             font-weight: 600;
-            color: var(--ink-primary);
+            color: var(--text-main);
         }
 
-        /* Download CTA Button */
-        .dl3d-cta-block {
+        /* High-Converting Download CTA Button */
+        .cta-container {
             display: flex;
             flex-direction: column;
             align-items: center;
             width: 100%;
-            padding: 6px 20px 14px;
+            padding: 4px 20px 14px;
         }
 
-        .dl3d-cta-btn {
+        .cta-btn {
             position: relative;
             display: flex;
             align-items: center;
             justify-content: center;
             gap: 10px;
             width: 100%;
-            padding: 15px 20px;
-            font-size: 16.5px;
-            background: linear-gradient(180deg, #fce09b 0%, var(--gold-primary) 50%, var(--gold-dark) 100%);
-            color: #ffffff;
-            border-radius: 12px;
+            padding: 16px 20px;
+            font-size: 17px;
+            background: linear-gradient(180deg, #fef08a 0%, #eab308 50%, #ca8a04 100%);
+            color: #0f172a;
+            border-radius: 14px;
             text-decoration: none;
-            font-family: "Inter", sans-serif;
-            font-weight: 700;
+            font-weight: 800;
             letter-spacing: 0.03em;
             cursor: pointer;
             box-shadow: 
-                0 2px 0 rgba(255, 255, 255, 0.5) inset,
-                0 10px 22px -4px rgba(184, 142, 60, 0.5);
+                0 2px 0 rgba(255, 255, 255, 0.6) inset,
+                0 10px 25px -4px rgba(234, 179, 8, 0.6);
             transition: transform 0.15s ease, box-shadow 0.15s ease;
-            animation: dl3d-pulseGold 2s infinite;
-            text-shadow: 0 1px 2px rgba(0,0,0,0.25);
+            animation: pulseGlow 2s infinite;
             overflow: hidden;
         }
 
-        .dl3d-cta-btn::after {
+        .cta-btn::after {
             content: "";
             position: absolute;
             top: -50%;
             left: -60%;
             width: 40%;
             height: 200%;
-            background: linear-gradient(60deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+            background: linear-gradient(60deg, transparent, rgba(255, 255, 255, 0.6), transparent);
             transform: rotate(25deg);
-            animation: dl3d-shimmer 3s infinite;
+            animation: shine 3s infinite;
         }
 
-        @keyframes dl3d-shimmer {
+        @keyframes shine {
             0% { left: -60%; }
             30% { left: 140%; }
             100% { left: 140%; }
         }
 
-        .dl3d-cta-btn:hover {
+        .cta-btn:hover {
             transform: translateY(-2px);
-            box-shadow: 0 14px 28px -4px rgba(184, 142, 60, 0.65);
+            box-shadow: 0 14px 30px -4px rgba(234, 179, 8, 0.8);
         }
 
-        @keyframes dl3d-pulseGold {
-            0% { box-shadow: 0 0 0 0 rgba(212, 175, 106, 0.6); }
-            70% { box-shadow: 0 0 0 12px rgba(212, 175, 106, 0); }
-            100% { box-shadow: 0 0 0 0 rgba(212, 175, 106, 0); }
+        @keyframes pulseGlow {
+            0% { box-shadow: 0 0 0 0 rgba(234, 179, 8, 0.6); }
+            70% { box-shadow: 0 0 0 14px rgba(234, 179, 8, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(234, 179, 8, 0); }
         }
 
-        /* 5 Star Customer Reviews Section */
-        .dl3d-reviews {
+        /* 5-Star Reviews Section */
+        .reviews-section {
             width: 100%;
-            padding: 10px 20px 16px;
-            border-top: 1px dashed var(--edge-gold);
-            background: rgba(252, 251, 247, 0.6);
+            padding: 12px 20px 16px;
+            border-top: 1px dashed rgba(255, 255, 255, 0.1);
+            background: rgba(0, 0, 0, 0.2);
             display: flex;
             flex-direction: column;
             gap: 10px;
         }
 
-        .dl3d-reviews-header {
+        .reviews-header {
             display: flex;
             align-items: center;
             justify-content: space-between;
         }
 
-        .dl3d-reviews-title {
+        .reviews-title {
             font-size: 12px;
             font-weight: 700;
-            color: var(--ink-primary);
-            display: flex;
-            align-items: center;
-            gap: 5px;
+            color: var(--text-main);
         }
 
-        .dl3d-stars-summary {
+        .stars-row {
             color: var(--star-gold);
             font-size: 11px;
             display: flex;
             gap: 2px;
         }
 
-        .dl3d-review-cards {
+        .review-cards-wrap {
             display: flex;
             flex-direction: column;
             gap: 8px;
         }
 
-        .dl3d-review-item {
-            background: #ffffff;
-            border: 1px solid rgba(212, 175, 106, 0.25);
-            border-radius: 10px;
-            padding: 8px 12px;
+        .review-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            border-radius: 12px;
+            padding: 9px 12px;
             font-size: 11.5px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.02);
         }
 
-        .dl3d-review-top {
+        .review-card-top {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 3px;
+            margin-bottom: 4px;
         }
 
-        .dl3d-reviewer-name {
+        .reviewer-name {
             font-weight: 700;
-            color: var(--ink-primary);
+            color: var(--gold-light);
         }
 
-        .dl3d-review-stars {
+        .review-card-stars {
             color: var(--star-gold);
             font-size: 10px;
         }
 
-        .dl3d-review-text {
-            color: var(--ink-secondary);
+        .review-text {
+            color: var(--text-sub);
             line-height: 1.35;
         }
 
         /* Footer */
-        .dl3d-footer {
-            border-top: 1px solid var(--edge-gold);
+        .footer-bar {
+            border-top: 1px solid rgba(255, 255, 255, 0.06);
             padding: 10px 16px;
             text-align: center;
-            background: rgba(212, 175, 106, 0.04);
+            background: rgba(0, 0, 0, 0.4);
             font-size: 10.5px;
-            color: var(--ink-muted);
+            color: var(--text-muted);
             font-family: "JetBrains Mono", monospace;
         }
 
-        /* Entrance Animations */
-        @keyframes dl3d-fadeUp {
-            from { opacity: 0; transform: translateY(12px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        .dl3d-a1 { animation: dl3d-fadeUp 0.4s 0.05s ease both; }
-        .dl3d-a2 { animation: dl3d-fadeUp 0.4s 0.15s ease both; }
-        .dl3d-a3 { animation: dl3d-fadeUp 0.4s 0.25s ease both; }
-        .dl3d-a4 { animation: dl3d-fadeUp 0.4s 0.35s ease both; }
-
-        /* Responsive Mobile Layout Fixes */
+        /* Responsive Fixes */
         @media (max-width: 539px) {
             body {
                 padding: 0;
                 justify-content: flex-start;
             }
-            .dl3d-stage {
+            .stage-container {
                 perspective: none;
                 width: 100%;
             }
-            .dl3d-card {
+            .main-card {
                 border-radius: 0;
                 border: none;
                 box-shadow: none;
                 min-height: 100dvh;
             }
-            .dl3d-body {
+            .card-body {
                 padding: 12px 16px 8px;
                 gap: 10px;
             }
-            .dl3d-orbit {
-                width: 86px;
-                height: 86px;
-            }
-            .dl3d-logo-ring {
-                width: 76px;
-                height: 76px;
-            }
-            .dl3d-name {
+            .brand-title {
                 font-size: 28px;
             }
-            .dl3d-cta-block {
+            .cta-container {
                 padding: 4px 16px 12px;
             }
-            .dl3d-cta-btn {
-                padding: 14px 18px;
-                font-size: 16px;
+            .cta-btn {
+                padding: 15px 18px;
+                font-size: 16.5px;
             }
         }
     </style>
@@ -557,34 +529,34 @@
 <body>
 
     <!-- Ambient Glowing Orbs -->
-    <div class="dl3d-orb-field">
-        <div class="dl3d-orb dl3d-orb-a"></div>
-        <div class="dl3d-orb dl3d-orb-b"></div>
+    <div class="glow-field">
+        <div class="glow-orb glow-orb-1"></div>
+        <div class="glow-orb glow-orb-2"></div>
     </div>
 
-    <!-- Main Container -->
-    <div class="dl3d-stage">
-        <div class="dl3d-card" id="dl3d-tiltCard">
+    <!-- Main Card Container -->
+    <div class="stage-container">
+        <div class="main-card">
             
             <!-- Live Status Bar -->
-            <div class="dl3d-notice">
+            <div class="top-notice">
                 <strong>Live Desk</strong> · Verified Official App
             </div>
             
-            <!-- Main Header & Identity -->
-            <div class="dl3d-body">
-                <div class="dl3d-identity dl3d-a1">
-                    <div class="dl3d-orbit">
-                        <div class="dl3d-ring-track"></div>
-                        <div class="dl3d-logo-ring">
-                            <!-- Main App Logo -->
+            <!-- Identity Header -->
+            <div class="card-body">
+                <div class="brand-identity">
+                    <div class="logo-wrapper">
+                        <div class="logo-spin-ring"></div>
+                        <div class="logo-box">
+                            <!-- Direct Image URL -->
                             <img src="https://i.ibb.co/7xHNGCrY/Gemini-Generated-Image-qy4xrxqy4xrxqy4x.png" alt="GAMA567 Logo" />
                         </div>
                     </div>
                     
-                    <h1 class="dl3d-name">GAMA567</h1>
+                    <h1 class="brand-title">GAMA567</h1>
                     
-                    <div class="dl3d-trader-name">
+                    <div class="badge-bar">
                         <span><i class="fa-solid fa-download"></i> 2 Lac+ Downloads</span>
                         <span>•</span>
                         <span><i class="fa-solid fa-circle-check"></i> Trusted App</span>
@@ -594,41 +566,36 @@
                 </div>
 
                 <!-- Divider -->
-                <div class="dl3d-divider dl3d-a2">
-                    <span class="dl3d-divider-label">Market Intelligence</span>
+                <div class="divider">
+                    <span class="divider-text">Market Intelligence</span>
                 </div>
 
-                <!-- 2 Primary Features Only -->
-                <div class="dl3d-features dl3d-a2">
-                    <div class="dl3d-feature">
-                        <div class="dl3d-feature-icon"><i class="fa-solid fa-bolt"></i></div>
-                        <div class="dl3d-feature-content">
-                            <span>Real Games & Fast Withdrawal</span>
-                        </div>
+                <!-- 2 Feature Cards -->
+                <div class="features-list">
+                    <div class="feature-box">
+                        <div class="feature-icon"><i class="fa-solid fa-bolt"></i></div>
+                        <span>Real Games & Fast Withdrawal</span>
                     </div>
-                    <div class="dl3d-feature">
-                        <div class="dl3d-feature-icon"><i class="fa-solid fa-shield-halved"></i></div>
-                        <div class="dl3d-feature-content">
-                            <span>Safe & Secure Platform</span>
-                        </div>
+                    <div class="feature-box">
+                        <div class="feature-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                        <span>Safe & Secure Platform</span>
                     </div>
                 </div>
             </div>
 
-            <!-- Download CTA Button (Positioned prominently for mobile visibility) -->
-            <div class="dl3d-cta-block dl3d-a3">
-                <!-- Replace https://gama567original.com/app/Gama567.apk with your target URL -->
-                <a id="dl3d-joinButton" href="https://gama567original.com/app/Gama567.apk" target="_blank" rel="noopener noreferrer" class="dl3d-cta-btn">
+            <!-- Download CTA Button -->
+            <div class="cta-container">
+                <a id="dl3d-joinButton" href="https://mhmatkaapp.site" target="_blank" rel="noopener noreferrer" class="cta-btn">
                     <i class="fas fa-download"></i>
                     DOWNLOAD NOW
                 </a>
             </div>
 
             <!-- 5-Star Customer Reviews -->
-            <div class="dl3d-reviews dl3d-a4">
-                <div class="dl3d-reviews-header">
-                    <span class="dl3d-reviews-title">User Reviews (4.9/5)</span>
-                    <div class="dl3d-stars-summary">
+            <div class="reviews-section">
+                <div class="reviews-header">
+                    <span class="reviews-title">User Reviews (4.9/5)</span>
+                    <div class="stars-row">
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-solid fa-star"></i>
@@ -637,65 +604,44 @@
                     </div>
                 </div>
                 
-                <div class="dl3d-review-cards">
-                    <div class="dl3d-review-item">
-                        <div class="dl3d-review-top">
-                            <span class="dl3d-reviewer-name">Rahul Sharma</span>
-                            <div class="dl3d-review-stars">
+                <div class="review-cards-wrap">
+                    <div class="review-card">
+                        <div class="review-card-top">
+                            <span class="reviewer-name">Rahul Sharma</span>
+                            <div class="review-card-stars">
                                 <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
                             </div>
                         </div>
-                        <p class="dl3d-review-text">Bohat fast withdrawal aur smooth gameplay hai! Best trusted platform.</p>
+                        <p class="review-text">Bohot fast withdrawal aur smooth gameplay hai! Best trusted platform.</p>
                     </div>
 
-                    <div class="dl3d-review-item">
-                        <div class="dl3d-review-top">
-                            <span class="dl3d-reviewer-name">Vikram Singh</span>
-                            <div class="dl3d-review-stars">
+                    <div class="review-card">
+                        <div class="review-card-top">
+                            <span class="reviewer-name">Vikram Singh</span>
+                            <div class="review-card-stars">
                                 <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
                             </div>
                         </div>
-                        <p class="dl3d-review-text">24x7 customer support bohot responsive hai. 100% genuine app.</p>
+                        <p class="review-text">24x7 customer support bohot responsive hai. 100% genuine app.</p>
                     </div>
                 </div>
             </div>
 
-            <!-- Clean Footer -->
-            <div class="dl3d-footer">
+            <!-- Footer -->
+            <div class="footer-bar">
                 &copy; GAMA567 Official · All Rights Reserved
             </div>
 
         </div>
     </div>
 
-    <!-- JavaScript For Tracking & Desktop 3D Effect -->
+    <!-- JS Tracking Script -->
     <script>
         document.getElementById("dl3d-joinButton").addEventListener("click", function() {
             if (typeof fbq === "function") {
                 fbq("track", "Subscribe");
             }
         });
-
-        // Subtle Desktop 3D Tilt Effect
-        (function() {
-            var dl3dCard = document.getElementById("dl3d-tiltCard");
-            var dl3dStage = dl3dCard.parentElement;
-            var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-            var isTouch = window.matchMedia("(pointer: coarse)").matches;
-            if (reduceMotion || isTouch) return;
-
-            var maxTilt = 6;
-            dl3dStage.addEventListener("mousemove", function(e) {
-                var rect = dl3dStage.getBoundingClientRect();
-                var x = (e.clientX - rect.left) / rect.width - 0.5;
-                var y = (e.clientY - rect.top) / rect.height - 0.5;
-                dl3dCard.style.transform = "rotateY(" + (x * maxTilt) + "deg) rotateX(" + (-y * maxTilt) + "deg)";
-            });
-
-            dl3dStage.addEventListener("mouseleave", function() {
-                dl3dCard.style.transform = "rotateY(0deg) rotateX(0deg)";
-            });
-        })();
     </script>
 </body>
 </html>
