@@ -1,92 +1,72 @@
-
 <!doctype html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Mhmatka</title>
-    <link rel="icon" type="image/png" href="./logo.webp" />
-
+    <title>gama567</title>
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700;12..96,800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-
-            <script>
-            var META_PIXEL_ID = "1043729658071118";
-            !(function(f, b, e, v, n, t, s) {
-                if (f.fbq) return;
-                n = f.fbq = function() {
-                    n.callMethod ?
-                        n.callMethod.apply(n, arguments) :
-                        n.queue.push(arguments);
-                };
-                if (!f._fbq) f._fbq = n;
-                n.push = n;
-                n.loaded = !0;
-                n.version = "2.0";
-                n.queue = [];
-                t = b.createElement(e);
-                t.async = !0;
-                t.src = v;
-                s = b.getElementsByTagName(e)[0];
-                s.parentNode.insertBefore(t, s);
-            })(
-                window,
-                document,
-                "script",
-                "https://connect.facebook.net/en_US/fbevents.js",
-            );
-            fbq("init", META_PIXEL_ID);
-            fbq("track", "PageView");
-        </script>
-        <noscript>
-            <img id="dl3d-mpx" height="1" width="1" style="display: none" alt="" />
-            <script>
-                document.getElementById("dl3d-mpx").src =
-                    "https://www.facebook.com/tr?id=" +
-                    META_PIXEL_ID +
-                    "&ev=PageView&noscript=1";
-            </script>
-        </noscript>
     
+    <script>
+        var META_PIXEL_ID = "1043729658071118";
+        !(function(f, b, e, v, n, t, s) {
+            if (f.fbq) return;
+            n = f.fbq = function() {
+                n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments);
+            };
+            if (!f._fbq) f._fbq = n;
+            n.push = n;
+            n.loaded = !0;
+            n.version = "2.0";
+            n.queue = [];
+            t = b.createElement(e);
+            t.async = !0;
+            t.src = v;
+            s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s);
+        })(window, document, "script", "https://connect.facebook.net/en_US/fbevents.js");
+        fbq("init", META_PIXEL_ID);
+        fbq("track", "PageView");
+    </script>
+    <noscript>
+        <img id="dl3d-mpx" height="1" width="1" style="display: none" alt="" src="https://www.facebook.com/tr?id=1043729658071118&ev=PageView&noscript=1" />
+    </noscript>
+
     <style>
         :root {
-            --bg-void: #040509;
-            --bg-deep: #0a0d16;
-            --surface: #12151f;
-            --surface-2: #171b28;
-            --edge: rgba(255, 255, 255, 0.07);
-            --edge-bright: rgba(212, 175, 106, 0.4);
-            --gold: #d4af6a;
-            --gold-bright: #f4d999;
-            --gold-dim: #8a6a3a;
-            --green: #34d399;
-            --green-bg: rgba(52, 211, 153, 0.1);
-            --green-bd: rgba(52, 211, 153, 0.35);
-            --ink: #f4f2ec;
-            --ink-dim: #9aa0ae;
-            --ink-faint: #5c6272;
-            --shadow-deep:
-                0 40px 90px -25px rgba(0, 0, 0, 0.85),
-                0 12px 32px rgba(0, 0, 0, 0.55);
+            /* Premium White and Gold Theme Variables */
+            --bg-void: #f8f6f0; /* Soft off-white background */
+            --bg-deep: #ffffff; /* Pure white for card */
+            --surface: #ffffff;
+            --surface-2: #fdfcf9;
+            --edge: rgba(212, 175, 106, 0.35); /* Golden edges */
+            --edge-bright: rgba(212, 175, 106, 0.9);
+            --gold: #c59b47;
+            --gold-bright: #e8c77b;
+            --gold-dim: #a67f33;
+            --green: #10b981;
+            --green-bg: rgba(16, 185, 129, 0.1);
+            --green-bd: rgba(16, 185, 129, 0.3);
+            --ink: #1a1a1a; /* Dark text for light theme */
+            --ink-dim: #4d4d4d;
+            --ink-faint: #737373;
+            --shadow-deep: 
+                0 40px 90px -25px rgba(197, 155, 71, 0.15), 
+                0 12px 32px rgba(0, 0, 0, 0.08);
             --section-gap: 16px;
         }
 
-        *,
-        *::before,
-        *::after {
+        *, *::before, *::after {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
         }
 
-        html {
-            font-size: 16px;
-        }
+        html { font-size: 16px; }
 
         body {
             font-family: "Inter", sans-serif;
@@ -100,7 +80,7 @@
             overflow-x: hidden;
         }
 
-        /* ── Ambient dark backdrop: grid + drifting glow spheres ── */
+        /* Ambient light backdrop grid */
         body::before {
             content: "";
             position: fixed;
@@ -108,12 +88,12 @@
             z-index: 0;
             pointer-events: none;
             background-image:
-                linear-gradient(var(--edge) 1px, transparent 1px),
-                linear-gradient(90deg, var(--edge) 1px, transparent 1px);
+                linear-gradient(rgba(212, 175, 106, 0.15) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(212, 175, 106, 0.15) 1px, transparent 1px);
             background-size: 42px 42px;
-            -webkit-mask-image: radial-gradient(ellipse 65% 55% at 50% 40%, #000 0%, transparent 75%);
-            mask-image: radial-gradient(ellipse 65% 55% at 50% 40%, #000 0%, transparent 75%);
-            opacity: 0.55;
+            -webkit-mask-image: radial-gradient(ellipse 70% 60% at 50% 40%, #000 0%, transparent 80%);
+            mask-image: radial-gradient(ellipse 70% 60% at 50% 40%, #000 0%, transparent 80%);
+            opacity: 0.8;
         }
 
         .dl3d-orb-field {
@@ -127,63 +107,48 @@
         .dl3d-orb {
             position: absolute;
             border-radius: 50%;
-            filter: blur(60px);
-            opacity: 0.35;
+            filter: blur(70px);
+            opacity: 0.4;
             animation: dl3d-drift 16s ease-in-out infinite;
         }
 
         .dl3d-orb-a {
-            width: 320px;
-            height: 320px;
-            left: -80px;
-            top: -60px;
-            background: radial-gradient(circle, var(--gold-dim), transparent 70%);
+            width: 350px;
+            height: 350px;
+            left: -100px;
+            top: -80px;
+            background: radial-gradient(circle, var(--gold-bright), transparent 70%);
         }
 
         .dl3d-orb-b {
-            width: 280px;
-            height: 280px;
-            right: -70px;
-            bottom: -40px;
-            background: radial-gradient(circle, var(--green), transparent 70%);
+            width: 300px;
+            height: 300px;
+            right: -80px;
+            bottom: -60px;
+            background: radial-gradient(circle, #fcfcfc, transparent 70%);
             animation-delay: -8s;
         }
 
         @keyframes dl3d-drift {
-
-            0%,
-            100% {
-                transform: translate(0, 0) scale(1);
-            }
-
-            50% {
-                transform: translate(24px, -18px) scale(1.08);
-            }
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            50% { transform: translate(30px, -20px) scale(1.05); }
         }
 
         @media (prefers-reduced-motion: reduce) {
-
-            .dl3d-orb,
-            .dl3d-badge::before,
-            .dl3d-live-dot,
-            .dl3d-ring-track,
-            .dl3d-ring-sat,
-            .dl3d-cta-btn {
+            .dl3d-orb, .dl3d-badge::before, .dl3d-live-dot, .dl3d-ring-track, .dl3d-ring-sat, .dl3d-cta-btn {
                 animation: none !important;
             }
         }
 
-        /* ── 3D stage: gives the card real perspective for the tilt ── */
         .dl3d-stage {
             position: relative;
             z-index: 1;
             perspective: 1400px;
         }
 
-        /* ── Card ── */
         .dl3d-card {
             position: relative;
-            background: linear-gradient(180deg, var(--surface) 0%, var(--bg-deep) 100%);
+            background: var(--bg-deep);
             border: 1px solid var(--edge);
             border-radius: 20px;
             box-shadow: var(--shadow-deep);
@@ -197,20 +162,19 @@
             margin-top: 10px;
         }
 
-        /* thin luminous top edge, like a beveled instrument panel */
+        /* Subtle top luminous edge */
         .dl3d-card::before {
             content: "";
             position: absolute;
             top: 0;
             left: 0;
             right: 0;
-            height: 1px;
-            background: linear-gradient(90deg, transparent, var(--gold-bright), var(--green), transparent);
-            opacity: 0.6;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--gold), transparent);
+            opacity: 0.8;
             z-index: 2;
         }
 
-        /* ── Telegram / channel notice ── */
         .dl3d-notice {
             display: flex;
             align-items: center;
@@ -218,40 +182,28 @@
             gap: 6px;
             padding: 9px 20px;
             border-bottom: 1px solid var(--edge);
-            background: rgba(255, 255, 255, 0.02);
+            background: rgba(212, 175, 106, 0.05);
             font-family: "JetBrains Mono", monospace;
-            font-size: 10.5px;
+            font-size: 11px;
             color: var(--ink-faint);
             letter-spacing: 0.06em;
             flex-shrink: 0;
         }
 
         .dl3d-notice strong {
-            color: var(--ink-dim);
-            font-weight: 500;
+            color: var(--gold-dim);
+            font-weight: 600;
         }
 
-        .dl3d-notice a {
-            color: var(--gold);
-            text-decoration: none;
-            font-weight: 500;
-        }
-
-        .dl3d-notice a:hover {
-            text-decoration: underline;
-        }
-
-        /* ── Body ── */
         .dl3d-body {
             display: flex;
             flex-direction: column;
             align-items: center;
-            padding: 10px 32px var(--section-gap);
+            padding: 20px 32px var(--section-gap);
             gap: var(--section-gap);
             transform: translateZ(24px);
         }
 
-        /* ── Identity + Signal Orb (signature element) ── */
         .dl3d-identity {
             display: flex;
             flex-direction: column;
@@ -263,8 +215,8 @@
 
         .dl3d-orbit {
             position: relative;
-            width: 128px;
-            height: 128px;
+            width: 135px;
+            height: 135px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -275,160 +227,90 @@
             position: absolute;
             inset: 0;
             border-radius: 50%;
-            background: conic-gradient(from 0deg,
-                    var(--gold) 0deg,
-                    transparent 60deg,
-                    transparent 300deg,
-                    var(--green) 360deg);
-            animation: dl3d-spin 7s linear infinite;
+            background: conic-gradient(from 0deg, var(--gold) 0deg, transparent 60deg, transparent 300deg, var(--gold-bright) 360deg);
+            animation: dl3d-spin 6s linear infinite;
             -webkit-mask: radial-gradient(farthest-side, transparent calc(100% - 2px), #000 calc(100% - 2px));
             mask: radial-gradient(farthest-side, transparent calc(100% - 2px), #000 calc(100% - 2px));
         }
 
         @keyframes dl3d-spin {
-            to {
-                transform: rotate(360deg);
-            }
-        }
-
-        .dl3d-ring-sat {
-            position: absolute;
-            inset: 0;
-            animation: dl3d-spin 7s linear infinite;
-        }
-
-        .dl3d-ring-sat::after {
-            content: "";
-            position: absolute;
-            top: -3px;
-            left: 50%;
-            width: 8px;
-            height: 8px;
-            border-radius: 50%;
-            background: var(--gold-bright);
-            box-shadow: 0 0 10px 2px var(--gold-bright);
-            transform: translateX(-50%);
+            to { transform: rotate(360deg); }
         }
 
         .dl3d-logo-ring {
             position: relative;
-            width: 96px;
-            height: 96px;
-            border-radius: 50%;
-            padding: 3px;
-            background: linear-gradient(135deg, var(--gold-dim), var(--gold-bright) 50%, var(--gold-dim));
-            box-shadow:
-                0 10px 26px rgba(0, 0, 0, 0.6),
-                0 0 0 6px rgba(212, 175, 106, 0.06);
+            width: 100px;
+            height: 100px;
+            border-radius: 20px; /* Rounded square suitable for apps */
+            padding: 4px;
+            background: linear-gradient(135deg, var(--gold-bright), var(--gold) 50%, var(--gold-dim));
+            box-shadow: 0 10px 20px rgba(197, 155, 71, 0.25);
         }
 
         .dl3d-logo-ring img {
             display: block;
             width: 100%;
             height: 100%;
-            border-radius: 50%;
+            border-radius: 16px;
             object-fit: cover;
-            border: 2px solid var(--bg-deep);
+            border: 2px solid #fff;
         }
 
         .dl3d-name {
             font-family: "Bricolage Grotesque", serif;
-            font-size: clamp(26px, 6.2vw, 36px);
-            font-weight: 700;
+            font-size: clamp(28px, 6.5vw, 38px);
+            font-weight: 800;
             color: var(--ink);
-            letter-spacing: -0.01em;
+            letter-spacing: -0.02em;
             line-height: 1.15;
         }
 
         .dl3d-trader-name {
-            font-family: "JetBrains Mono", monospace;
-            font-size: 11.5px;
-            color: var(--ink-faint);
-            letter-spacing: 0.14em;
-            text-transform: uppercase;
-            font-weight: 400;
-            margin-top: 8px;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 5px;
+            font-family: "Inter", sans-serif;
+            font-size: 13px;
+            color: var(--ink-dim);
+            font-weight: 500;
+            margin-top: 6px;
         }
 
         .dl3d-badge {
             display: inline-flex;
             align-items: center;
-            flex-shrink: 0;
-            max-width: 100%;
-            box-sizing: border-box;
             gap: 6px;
             background: var(--green-bg);
             border: 1px solid var(--green-bd);
             border-radius: 100px;
-            padding: 5px 13px;
-            font-size: 12px;
+            padding: 6px 14px;
+            font-size: 12.5px;
             color: var(--green);
-            font-weight: 500;
-            letter-spacing: 0.02em;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
+            font-weight: 600;
             position: relative;
-        }
-
-        .dl3d-badge::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: -75%;
-            width: 50%;
-            height: 100%;
-            background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.25), transparent);
-            animation: dl3d-shine 2.5s infinite;
-        }
-
-        @keyframes dl3d-shine {
-            0% {
-                left: -75%;
-            }
-
-            100% {
-                left: 125%;
-            }
+            overflow: hidden;
+            margin-top: 5px;
         }
 
         .dl3d-live-dot {
-            width: 6px;
-            height: 6px;
+            width: 7px;
+            height: 7px;
             border-radius: 50%;
             background: var(--green);
-            animation: dl3d-blink 2.2s ease-in-out infinite;
+            animation: dl3d-blink 2s ease-in-out infinite;
         }
 
         @keyframes dl3d-blink {
-
-            0%,
-            100% {
-                opacity: 1;
-                transform: scale(1);
-            }
-
-            50% {
-                opacity: 0.45;
-                transform: scale(1.4);
-            }
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.4; transform: scale(1.3); }
         }
 
-        /* ── Divider ── */
         .dl3d-divider {
             width: 100%;
             display: flex;
             align-items: center;
             gap: 12px;
-            flex-shrink: 0;
+            margin: 10px 0;
         }
 
-        .dl3d-divider::before,
-        .dl3d-divider::after {
+        .dl3d-divider::before, .dl3d-divider::after {
             content: "";
             flex: 1;
             height: 1px;
@@ -437,19 +319,18 @@
 
         .dl3d-divider-label {
             font-family: "JetBrains Mono", monospace;
-            font-size: 10px;
-            letter-spacing: 0.2em;
+            font-size: 11px;
+            letter-spacing: 0.15em;
             text-transform: uppercase;
-            color: var(--gold);
-            font-weight: 500;
+            color: var(--gold-dim);
+            font-weight: 600;
             white-space: nowrap;
         }
 
-        /* ── Features, styled as beveled instrument-panel rows ── */
         .dl3d-features {
             display: flex;
             flex-direction: column;
-            gap: 9px;
+            gap: 10px;
             width: 100%;
         }
 
@@ -457,59 +338,50 @@
             display: flex;
             align-items: center;
             gap: 14px;
-            padding: 12px 14px;
-            background: linear-gradient(180deg, var(--surface-2), var(--surface));
+            padding: 14px 16px;
+            background: var(--surface-2);
             border: 1px solid var(--edge);
-            border-radius: 12px;
-            transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+            border-radius: 14px;
+            transition: all 0.25s ease;
             width: 100%;
-            box-shadow: 0 1px 0 rgba(255, 255, 255, 0.03) inset, 0 6px 14px rgba(0, 0, 0, 0.35);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.02);
         }
 
         .dl3d-feature:hover {
-            border-color: var(--edge-bright);
+            border-color: var(--gold);
             transform: translateY(-2px) translateZ(6px);
-            box-shadow: 0 14px 30px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 10px 25px rgba(212, 175, 106, 0.15);
+            background: #fff;
         }
 
         .dl3d-feature-icon {
-            width: 32px;
-            height: 32px;
-            border-radius: 9px;
-            background: linear-gradient(145deg, var(--surface-2), var(--bg-deep));
+            width: 36px;
+            height: 36px;
+            border-radius: 10px;
+            background: linear-gradient(145deg, #fff, #fdfcf9);
             border: 1px solid var(--edge);
             display: flex;
             align-items: center;
             justify-content: center;
             flex-shrink: 0;
-            font-size: 13px;
-            color: var(--gold);
-            box-shadow:
-                inset 0 1px 0 rgba(255, 255, 255, 0.06),
-                0 3px 8px rgba(0, 0, 0, 0.5);
-        }
-
-        .dl3d-feature-content {
-            display: flex;
-            flex-direction: column;
-            gap: 1px;
+            font-size: 15px;
+            color: var(--gold-dim);
+            box-shadow: 0 3px 8px rgba(212, 175, 106, 0.1);
         }
 
         .dl3d-feature-content span {
-            font-size: 13.5px;
-            color: var(--ink-dim);
-            line-height: 1.45;
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--ink);
         }
 
-        /* ── CTA block ── */
         .dl3d-cta-block {
             display: flex;
             flex-direction: column;
             align-items: center;
             gap: 8px;
             width: 100%;
-            padding: var(--section-gap) 32px 26px;
-            flex-shrink: 0;
+            padding: 10px 32px 30px;
             transform: translateZ(24px);
         }
 
@@ -518,30 +390,31 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 9px;
+            gap: 10px;
             width: 100%;
-            padding: 16px 20px;
-            font-size: 16px;
+            padding: 18px 20px;
+            font-size: 17px;
             background: linear-gradient(180deg, var(--gold-bright), var(--gold) 60%, var(--gold-dim));
-            color: #1a1206;
-            border-radius: 10px;
+            color: #fff;
+            border-radius: 12px;
             text-decoration: none;
             font-family: "Inter", sans-serif;
-            font-weight: 600;
-            letter-spacing: 0.01em;
+            font-weight: 700;
+            letter-spacing: 0.5px;
             cursor: pointer;
-            box-shadow:
-                0 1px 0 rgba(255, 255, 255, 0.5) inset,
-                0 10px 26px -6px rgba(212, 175, 106, 0.55);
-            transition: transform 0.15s ease, box-shadow 0.15s ease;
-            animation: dl3d-pulseGold 2.4s infinite;
+            box-shadow: 
+                0 2px 0 rgba(255, 255, 255, 0.4) inset, 
+                0 12px 24px -6px rgba(212, 175, 106, 0.6);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            animation: dl3d-pulseGold 2.2s infinite;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.2);
         }
 
         .dl3d-cta-btn:hover {
-            transform: translateY(-2px);
-            box-shadow:
-                0 1px 0 rgba(255, 255, 255, 0.5) inset,
-                0 16px 34px -6px rgba(212, 175, 106, 0.7);
+            transform: translateY(-3px);
+            box-shadow: 
+                0 2px 0 rgba(255, 255, 255, 0.4) inset, 
+                0 18px 32px -6px rgba(212, 175, 106, 0.75);
         }
 
         .dl3d-cta-btn:active {
@@ -549,260 +422,78 @@
         }
 
         @keyframes dl3d-pulseGold {
-            0% {
-                box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset, 0 0 0 0 rgba(212, 175, 106, 0.45);
-            }
-
-            70% {
-                box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset, 0 0 0 14px rgba(212, 175, 106, 0);
-            }
-
-            100% {
-                box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset, 0 0 0 0 rgba(212, 175, 106, 0);
-            }
+            0% { box-shadow: 0 2px 0 rgba(255, 255, 255, 0.4) inset, 0 0 0 0 rgba(212, 175, 106, 0.5); }
+            70% { box-shadow: 0 2px 0 rgba(255, 255, 255, 0.4) inset, 0 0 0 15px rgba(212, 175, 106, 0); }
+            100% { box-shadow: 0 2px 0 rgba(255, 255, 255, 0.4) inset, 0 0 0 0 rgba(212, 175, 106, 0); }
         }
 
-        /* ── Platform brand variants ── */
-        .dl3d-cta-btn.dl3d-cta-whatsapp {
-            background: linear-gradient(180deg, #3fe08c, #25d366 55%, #1aa851);
-            color: #06210f;
-            box-shadow: 0 1px 0 rgba(255, 255, 255, 0.4) inset, 0 10px 26px -6px rgba(37, 211, 102, 0.55);
-            animation: dl3d-pulseWa 2.4s infinite;
-        }
-
-        @keyframes dl3d-pulseWa {
-            0% {
-                box-shadow: 0 1px 0 rgba(255, 255, 255, 0.4) inset, 0 0 0 0 rgba(37, 211, 102, 0.5);
-            }
-
-            70% {
-                box-shadow: 0 1px 0 rgba(255, 255, 255, 0.4) inset, 0 0 0 14px rgba(37, 211, 102, 0);
-            }
-
-            100% {
-                box-shadow: 0 1px 0 rgba(255, 255, 255, 0.4) inset, 0 0 0 0 rgba(37, 211, 102, 0);
-            }
-        }
-
-        .dl3d-cta-btn.dl3d-cta-facebook {
-            background: linear-gradient(180deg, #5b9bf8, #1877f2 55%, #0f5fd1);
-            color: #ffffff;
-            box-shadow: 0 1px 0 rgba(255, 255, 255, 0.35) inset, 0 10px 26px -6px rgba(24, 119, 242, 0.55);
-            animation: dl3d-pulseFb 2.4s infinite;
-        }
-
-        @keyframes dl3d-pulseFb {
-            0% {
-                box-shadow: 0 1px 0 rgba(255, 255, 255, 0.35) inset, 0 0 0 0 rgba(24, 119, 242, 0.5);
-            }
-
-            70% {
-                box-shadow: 0 1px 0 rgba(255, 255, 255, 0.35) inset, 0 0 0 14px rgba(24, 119, 242, 0);
-            }
-
-            100% {
-                box-shadow: 0 1px 0 rgba(255, 255, 255, 0.35) inset, 0 0 0 0 rgba(24, 119, 242, 0);
-            }
-        }
-
-        .dl3d-cta-btn.dl3d-cta-instagram {
-            background: linear-gradient(135deg, #4f5bd5, #962fbf 30%, #d62976 55%, #fa7e1e 80%, #feda75 100%);
-            color: #ffffff;
-            box-shadow: 0 1px 0 rgba(255, 255, 255, 0.35) inset, 0 10px 26px -6px rgba(214, 41, 118, 0.55);
-            animation: dl3d-pulseIg 2.4s infinite;
-        }
-
-        @keyframes dl3d-pulseIg {
-            0% {
-                box-shadow: 0 1px 0 rgba(255, 255, 255, 0.35) inset, 0 0 0 0 rgba(214, 41, 118, 0.5);
-            }
-
-            70% {
-                box-shadow: 0 1px 0 rgba(255, 255, 255, 0.35) inset, 0 0 0 14px rgba(214, 41, 118, 0);
-            }
-
-            100% {
-                box-shadow: 0 1px 0 rgba(255, 255, 255, 0.35) inset, 0 0 0 0 rgba(214, 41, 118, 0);
-            }
-        }
-
-        .dl3d-cta-btn.dl3d-cta-link {
-            background: linear-gradient(180deg, #6cc9f2, #229ed9 55%, #1580ae);
-            color: #ffffff;
-            box-shadow: 0 1px 0 rgba(255, 255, 255, 0.35) inset, 0 10px 26px -6px rgba(34, 158, 217, 0.55);
-            animation: dl3d-pulseTg 2.4s infinite;
-        }
-
-        @keyframes dl3d-pulseTg {
-            0% {
-                box-shadow: 0 1px 0 rgba(255, 255, 255, 0.35) inset, 0 0 0 0 rgba(34, 158, 217, 0.5);
-            }
-
-            70% {
-                box-shadow: 0 1px 0 rgba(255, 255, 255, 0.35) inset, 0 0 0 14px rgba(34, 158, 217, 0);
-            }
-
-            100% {
-                box-shadow: 0 1px 0 rgba(255, 255, 255, 0.35) inset, 0 0 0 0 rgba(34, 158, 217, 0);
-            }
-        }
-
-        .dl3d-cta-btn.dl3d-cta-link {
-            background: linear-gradient(180deg,#ffb347,#ff7b00 55%,#e85d04);;
-            color: #fff;
-            box-shadow: 0 2px 0 rgba(255, 255, 255, .35) inset, 0 12px 30px rgba(255, 184, 0, .45);
-            animation: dl3d-pulseGold 2s infinite;
-        }
-
-        @keyframes dl3d-pulseGold {
-            0% {
-                box-shadow: 0 1px 0 rgba(255, 255, 255, 0.35) inset, 0 0 0 0 rgba(34, 158, 217, 0.5);
-            }
-
-            70% {
-                box-shadow: 0 1px 0 rgba(255, 255, 255, 0.35) inset, 0 0 0 14px rgba(34, 158, 217, 0);
-            }
-
-            100% {
-                box-shadow: 0 1px 0 rgba(255, 255, 255, 0.35) inset, 0 0 0 0 rgba(34, 158, 217, 0);
-            }
-        }
-
-        .dl3d-cta-sub {
-            font-size: 11.5px;
-            color: var(--ink-faint);
-            letter-spacing: 0.02em;
-            font-weight: 400;
-        }
-
-        .dl3d-cta-sub a {
-            color: var(--gold);
-            text-decoration: none;
-            font-weight: 500;
-        }
-
-        .dl3d-cta-sub a:hover {
-            text-decoration: underline;
-        }
-
-        /* ── Footer ── */
         .dl3d-footer {
             border-top: 1px solid var(--edge);
-            padding: 12px 24px 14px;
-            display: flex;
-            flex-direction: column;
-            gap: 4px;
-            align-items: center;
-            background: rgba(255, 255, 255, 0.015);
-            flex-shrink: 0;
+            padding: 16px 24px;
+            text-align: center;
+            background: rgba(212, 175, 106, 0.03);
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
         }
 
         .dl3d-footer-ads {
             font-family: "JetBrains Mono", monospace;
-            font-size: 10.5px;
+            font-size: 11px;
             color: var(--ink-faint);
-            letter-spacing: 0.06em;
-            text-align: center;
-            font-weight: 400;
         }
 
-        .dl3d-disclaimer {
-            font-size: 10.5px;
-            color: var(--ink-faint);
-            text-align: center;
-            line-height: 1.6;
-            font-weight: 300;
-            opacity: 0.8;
+        .dl3d-footer-ads a {
+            color: var(--gold-dim);
+            text-decoration: none;
+            font-weight: 700;
+            background: rgba(212, 175, 106, 0.15);
+            padding: 3px 8px;
+            border-radius: 6px;
+            margin-left: 4px;
+            transition: all 0.2s;
         }
 
-        .dl3d-disclaimer strong {
-            font-weight: 500;
-            color: var(--ink-dim);
+        .dl3d-footer-ads a:hover {
+            background: var(--gold);
+            color: #fff;
         }
 
-        /* ── Entrance animations ── */
+        /* Entrance animations */
         @keyframes dl3d-fadeUp {
-            from {
-                opacity: 0;
-                transform: translateY(12px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+            from { opacity: 0; transform: translateY(15px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
-        .dl3d-a3 {
-            animation: dl3d-fadeUp 0.5s 0.1s ease both;
-        }
+        .dl3d-a3 { animation: dl3d-fadeUp 0.5s 0.1s ease both; }
+        .dl3d-a4 { animation: dl3d-fadeUp 0.5s 0.2s ease both; }
+        .dl3d-a5 { animation: dl3d-fadeUp 0.5s 0.3s ease both; }
+        .dl3d-a7 { animation: dl3d-fadeUp 0.5s 0.4s ease both; }
 
-        .dl3d-a4 {
-            animation: dl3d-fadeUp 0.5s 0.2s ease both;
-        }
-
-        .dl3d-a5 {
-            animation: dl3d-fadeUp 0.5s 0.3s ease both;
-        }
-
-        .dl3d-a7 {
-            animation: dl3d-fadeUp 0.5s 0.4s ease both;
-        }
-
-        /* ── Desktop ── */
+        /* Desktop */
         @media (min-width: 540px) {
-            body {
-                padding: 40px 20px;
-            }
-
-            .dl3d-card {
-                border-radius: 22px;
-            }
-
-            .dl3d-body {
-                padding: 34px 40px var(--section-gap);
-            }
-
-            .dl3d-cta-block {
-                padding: var(--section-gap) 40px 26px;
-            }
+            body { padding: 40px 20px; }
+            .dl3d-card { border-radius: 24px; }
+            .dl3d-body { padding: 34px 40px var(--section-gap); }
+            .dl3d-cta-block { padding: 10px 40px 30px; }
         }
 
-        /* ── Mobile ── */
+        /* Mobile */
         @media (max-width: 539px) {
-            body {
-                padding: 0 !important;
-                justify-content: center;
-                align-items: center;
-            }
-
-            .dl3d-stage {
-                perspective: none;
-            }
-
+            body { padding: 0 !important; background: var(--bg-deep); }
+            .dl3d-stage { perspective: none; width: 100%; }
             .dl3d-card {
-                /*width: 100%;*/
+                width: 100%;
                 min-height: 100dvh;
                 border-radius: 0;
                 border: none;
                 box-shadow: none;
-                justify-content: flex-start;
+                margin-top: 0;
                 transform: none !important;
             }
-
-            .dl3d-orbit {
-                width: 108px;
-                height: 108px;
-            }
-
-            .dl3d-logo-ring {
-                width: 84px;
-                height: 84px;
-            }
+            .dl3d-footer { border-radius: 0; }
         }
     </style>
 </head>
-
 <body>
     <div class="dl3d-orb-field">
         <div class="dl3d-orb dl3d-orb-a"></div>
@@ -811,27 +502,30 @@
 
     <div class="dl3d-stage">
         <div class="dl3d-card" id="dl3d-tiltCard">
-                            <div class="dl3d-notice">
-                    <strong>Live desk</strong> · verified signal source
-                </div>
+            
+            <div class="dl3d-notice">
+                <strong>Live desk</strong> · verified signal source
+            </div>
             
             <div class="dl3d-body">
                 <div class="dl3d-identity dl3d-a3">
                     <div class="dl3d-orbit">
                         <div class="dl3d-ring-track"></div>
-                        <div class="dl3d-ring-sat"></div>
                         <div class="dl3d-logo-ring">
-                            <img src="https://www.adyindiaa.com/upload/profile_image/6a737fe96396d.jpeg" alt="Mhmatka Logo" />
+                            <!-- Logo image mapped directly to your requested file name -->
+                            <img src="./Gemini_Generated_Image_qy4xrxqy4xrxqy4x.png" alt="gama567 Logo" />
                         </div>
                     </div>
                     <div>
-                        <h1 class="dl3d-name">Mhmatka</h1>
+                        <h1 class="dl3d-name">gama567</h1>
                         <p class="dl3d-trader-name">
-                            24x7 Market Games Available                        </p>
+                            24x7 Market Games Available
+                        </p>
                     </div>
-                    <div class="dl3d-badge" style="display: ;">
+                    <div class="dl3d-badge">
                         <span class="dl3d-live-dot"></span>
-                        Mhmatka                    </div>
+                        gama567
+                    </div>
                 </div>
 
                 <div class="dl3d-divider dl3d-a4">
@@ -839,43 +533,45 @@
                 </div>
 
                 <div class="dl3d-features dl3d-a4">
-                                                <div class="dl3d-feature">
-                                <div class="dl3d-feature-icon"><i class="fa-solid fa-chart-line"></i></div>
-                                <div class="dl3d-feature-content">
-                                    <span>Real Games & Fast Withdrawal</span>
-                                </div>
-                            </div>
-                                                <div class="dl3d-feature">
-                                <div class="dl3d-feature-icon"><i class="fa-solid fa-chart-line"></i></div>
-                                <div class="dl3d-feature-content">
-                                    <span>Minimum Deposit -50</span>
-                                </div>
-                            </div>
-                                                <div class="dl3d-feature">
-                                <div class="dl3d-feature-icon"><i class="fa-solid fa-chart-line"></i></div>
-                                <div class="dl3d-feature-content">
-                                    <span>Minimum Withdrawal -500</span>
-                                </div>
-                            </div>
-                                                <div class="dl3d-feature">
-                                <div class="dl3d-feature-icon"><i class="fa-solid fa-chart-line"></i></div>
-                                <div class="dl3d-feature-content">
-                                    <span>Safe & Secure Platform</span>
-                                </div>
-                            </div>
-                                    </div>
+                    <div class="dl3d-feature">
+                        <div class="dl3d-feature-icon"><i class="fa-solid fa-bolt"></i></div>
+                        <div class="dl3d-feature-content">
+                            <span>Real Games & Fast Withdrawal</span>
+                        </div>
+                    </div>
+                    <div class="dl3d-feature">
+                        <div class="dl3d-feature-icon"><i class="fa-solid fa-coins"></i></div>
+                        <div class="dl3d-feature-content">
+                            <span>Minimum Deposit - 50</span>
+                        </div>
+                    </div>
+                    <div class="dl3d-feature">
+                        <div class="dl3d-feature-icon"><i class="fa-solid fa-money-bill-transfer"></i></div>
+                        <div class="dl3d-feature-content">
+                            <span>Minimum Withdrawal - 500</span>
+                        </div>
+                    </div>
+                    <div class="dl3d-feature">
+                        <div class="dl3d-feature-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                        <div class="dl3d-feature-content">
+                            <span>Safe & Secure Platform</span>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <div class="dl3d-cta-block dl3d-a5">
-                                <a id="dl3d-joinButton" href="https://mhmatkaapp.site" target="_blank" rel="noopener noreferrer" class="dl3d-cta-btn dl3d-cta-link">
-                    <i class="fas fa-link"></i>
-                    DOWNLOAD NOW</a>
+                <!-- IMPORTANT: Replace https://gama567original.com/app/Gama567.apk with your actual button link -->
+                <a id="dl3d-joinButton" href="https://gama567original.com/app/Gama567.apk" target="_blank" rel="noopener noreferrer" class="dl3d-cta-btn">
+                    <i class="fas fa-download"></i>
+                    DOWNLOAD NOW
+                </a>
             </div>
 
             <div class="dl3d-footer dl3d-a7">
                 <p class="dl3d-footer-ads">
                     Ads maintained by
-                    <a href="https://www.adyindiaa.com/" style="color:#f4d999; text-decoration:none; font-weight:600; background:rgba(212,175,106,0.12); padding:2px 6px; border-radius:4px;">Adyindiaa</a>
+                    <a href="https://www.adyindiaa.com/" target="_blank">Adyindiaa</a>
                 </p>
             </div>
         </div>
@@ -886,7 +582,7 @@
             fbq("track", "Subscribe");
         });
 
-        // Subtle pointer-driven 3D tilt on desktop only; respects reduced-motion and touch devices.
+        // 3D Tilt Effect (Desktop only, respects touch/motion settings)
         (function() {
             var dl3dCard = document.getElementById("dl3d-tiltCard");
             var dl3dStage = dl3dCard.parentElement;
@@ -894,14 +590,12 @@
             var isTouch = window.matchMedia("(pointer: coarse)").matches;
             if (reduceMotion || isTouch) return;
 
-            var maxTilt = 6;
-
+            var maxTilt = 8;
             dl3dStage.addEventListener("mousemove", function(e) {
                 var rect = dl3dStage.getBoundingClientRect();
                 var x = (e.clientX - rect.left) / rect.width - 0.5;
                 var y = (e.clientY - rect.top) / rect.height - 0.5;
-                dl3dCard.style.transform =
-                    "rotateY(" + (x * maxTilt) + "deg) rotateX(" + (-y * maxTilt) + "deg)";
+                dl3dCard.style.transform = "rotateY(" + (x * maxTilt) + "deg) rotateX(" + (-y * maxTilt) + "deg)";
             });
 
             dl3dStage.addEventListener("mouseleave", function() {
@@ -910,5 +604,4 @@
         })();
     </script>
 </body>
-
 </html>
